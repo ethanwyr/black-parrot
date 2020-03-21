@@ -7,7 +7,8 @@
  *    is virtually-indexed and physically-tagged cache. It is 8-way
  *    set-associative.
  *
- *    There are three different 1rw memory blocks: data_mem, tag_mem, stat_mem.
+ *    There are three different 1rw memory blocks: data_mem, tag_mem, 
+ .
  *    
  *    data_mem is divided into 8 different banks, and cache blocks are
  *    interleaved among the banks. The governing relationship is "bank_id =
@@ -87,14 +88,14 @@ module bp_be_dcache
     , parameter lock_max_limit_p=8
 
     , localparam cfg_bus_width_lp= `bp_cfg_bus_width(vaddr_width_p, core_id_width_p, cce_id_width_p, lce_id_width_p, cce_pc_width_p, cce_instr_width_p)
-    , localparam block_size_in_words_lp=lce_assoc_p
+    , localparam block_size_in_words_lp=lce_assoc_p   // 512bit / 64bit = 8 
     , localparam data_mask_width_lp=(dword_width_p>>3)
     , localparam byte_offset_width_lp=`BSG_SAFE_CLOG2(dword_width_p>>3)
     , localparam word_offset_width_lp=`BSG_SAFE_CLOG2(block_size_in_words_lp)
     , localparam block_offset_width_lp=(word_offset_width_lp+byte_offset_width_lp)
     , localparam index_width_lp=`BSG_SAFE_CLOG2(lce_sets_p)
     , localparam ptag_width_lp=(paddr_width_p-bp_page_offset_width_gp)
-    , localparam way_id_width_lp=`BSG_SAFE_CLOG2(lce_assoc_p)
+    , localparam way_id_width_lp=`BSG_SAFE_CLOG2(lce_assoc_p) 
   
     , localparam lce_data_width_lp=(lce_assoc_p*dword_width_p)
 
@@ -312,7 +313,7 @@ module bp_be_dcache
   bp_be_dcache_tag_info_s [lce_assoc_p-1:0] tag_mem_data_lo;
   
   bsg_mem_1rw_sync_mask_write_bit
-    #(.width_p(tag_info_width_lp*lce_assoc_p)
+    #(.width_p(tag_info_width_lp*lce_assoc_p)  // tag_width * ways
       ,.els_p(lce_sets_p)
     )
     tag_mem
@@ -331,14 +332,14 @@ module bp_be_dcache
   logic [lce_assoc_p-1:0] data_mem_v_li;
   logic data_mem_w_li;
   logic [lce_assoc_p-1:0][index_width_lp+word_offset_width_lp-1:0] data_mem_addr_li;
-  logic [lce_assoc_p-1:0][dword_width_p-1:0] data_mem_data_li;
+  logic [lce_assoc_p-1:0][dword_width_p-1:0] data_mem_data_li;  // 512 bit per block
   logic [lce_assoc_p-1:0][data_mask_width_lp-1:0] data_mem_mask_li;
-  logic [lce_assoc_p-1:0][dword_width_p-1:0] data_mem_data_lo;
+  logic [lce_assoc_p-1:0][dword_width_p-1:0] data_mem_data_lo;  // 512 bit per block
   
   for (genvar i = 0; i < lce_assoc_p; i++) begin: data_mem
     bsg_mem_1rw_sync_mask_write_byte
       #(.data_width_p(dword_width_p)
-        ,.els_p(lce_sets_p*lce_assoc_p)
+        ,.els_p(lce_sets_p*lce_assoc_p)  // blocks * ways 
         )
       data_mem
         (.clk_i(clk_i)

@@ -272,6 +272,7 @@ typedef struct packed
                                                                                                    \
   , localparam vtag_width_p  = proc_param_lp.vaddr_width - page_offset_width_p                     \
   , localparam ptag_width_p  = proc_param_lp.paddr_width - page_offset_width_p                     \
+                                                                                                   \
 
 `endif
 

@@ -1,0 +1,1081 @@
+****************************************
+Report : timing
+	-path_type full_clock
+	-delay_type min
+	-slack_lesser_than 1000000.000
+	-max_paths 30
+	-group core_clk
+	-transition_time
+	-sort_by slack
+Design : bp_softcore
+Version: K-2015.12-SP3-2
+Date   : Fri Mar 20 23:48:00 2020
+****************************************
+
+Report timing status: Started...
+Report timing status: Processing group core_clk
+
+  Startpoint: core/be/be_calculator/comp_stage_reg/data_r_reg_217_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_checker/scheduler/int_regfile/rf/macro_mem0
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: clk_i
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 1.000
+  Min Clock Paths Derating Factor : 1.000
+  Max Clock Paths Derating Factor : 1.000
+
+  Point                                                                              Trans       Incr       Path
+  -----------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                                    0.000      0.000
+  clock source latency                                                                          0.000      0.000
+  clk_i (in)                                                                         0.000      0.000      0.000 r
+  core/be/be_calculator/comp_stage_reg/data_r_reg_217_/CLK (DFFX1)                   0.000      0.000      0.000 r
+  core/be/be_calculator/comp_stage_reg/data_r_reg_217_/Q (DFFX1)                     0.032      0.158 &    0.158 r
+  core/be/icc_place42/Z (NBUFFX2)                                                    0.047      0.063 &    0.221 r
+  core/be/be_checker/scheduler/int_regfile/rf/macro_mem0/I2[25] (saed90_64x32_2P)    0.034     -0.000 &    0.220 r
+  data arrival time                                                                                        0.220
+
+  clock core_clk (rise edge)                                                                    0.000      0.000
+  clock source latency                                                                          0.000      0.000
+  clk_i (in)                                                                         0.000      0.000      0.000 r
+  core/be/be_checker/scheduler/int_regfile/rf/macro_mem0/CE2 (saed90_64x32_2P)       0.000      0.000      0.000 r
+  clock reconvergence pessimism                                                                 0.000      0.000
+  library hold time                                                                             0.050      0.050
+  data required time                                                                                       0.050
+  -----------------------------------------------------------------------------------------------------------------
+  data required time                                                                                       0.050
+  data arrival time                                                                                       -0.220
+  -----------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                              0.170
+
+
+  Startpoint: core/be/be_calculator/comp_stage_reg/data_r_reg_217_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_checker/scheduler/int_regfile/rf/macro_mem1
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: clk_i
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 1.000
+  Min Clock Paths Derating Factor : 1.000
+  Max Clock Paths Derating Factor : 1.000
+
+  Point                                                                              Trans       Incr       Path
+  -----------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                                    0.000      0.000
+  clock source latency                                                                          0.000      0.000
+  clk_i (in)                                                                         0.000      0.000      0.000 r
+  core/be/be_calculator/comp_stage_reg/data_r_reg_217_/CLK (DFFX1)                   0.000      0.000      0.000 r
+  core/be/be_calculator/comp_stage_reg/data_r_reg_217_/Q (DFFX1)                     0.032      0.158 &    0.158 r
+  core/be/icc_place42/Z (NBUFFX2)                                                    0.047      0.063 &    0.221 r
+  core/be/be_checker/scheduler/int_regfile/rf/macro_mem1/I2[25] (saed90_64x32_2P)    0.034     -0.000 &    0.220 r
+  data arrival time                                                                                        0.220
+
+  clock core_clk (rise edge)                                                                    0.000      0.000
+  clock source latency                                                                          0.000      0.000
+  clk_i (in)                                                                         0.000      0.000      0.000 r
+  core/be/be_checker/scheduler/int_regfile/rf/macro_mem1/CE2 (saed90_64x32_2P)       0.000      0.000      0.000 r
+  clock reconvergence pessimism                                                                 0.000      0.000
+  library hold time                                                                             0.050      0.050
+  data required time                                                                                       0.050
+  -----------------------------------------------------------------------------------------------------------------
+  data required time                                                                                       0.050
+  data arrival time                                                                                       -0.220
+  -----------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                              0.170
+
+
+  Startpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_70_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_153_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: clk_i
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 1.000
+  Min Clock Paths Derating Factor : 1.000
+  Max Clock Paths Derating Factor : 1.000
+
+  Point                                                               Trans       Incr       Path
+  --------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock source latency                                                           0.000      0.000
+  clk_i (in)                                                          0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_70_/CLK (DFFX1)     0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_70_/Q (DFFX1)       0.030      0.173 &    0.173 f
+  core/be/be_calculator/calc_stage_reg/data_r_reg_153_/D (DFFX1)      0.030      0.000 &    0.173 f
+  data arrival time                                                                         0.173
+
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock source latency                                                           0.000      0.000
+  clk_i (in)                                                          0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_153_/CLK (DFFX1)    0.000      0.000      0.000 r
+  clock reconvergence pessimism                                                  0.000      0.000
+  library hold time                                                             -0.007     -0.007
+  data required time                                                                       -0.007
+  --------------------------------------------------------------------------------------------------
+  data required time                                                                       -0.007
+  data arrival time                                                                        -0.173
+  --------------------------------------------------------------------------------------------------
+  slack (MET)                                                                               0.180
+
+
+  Startpoint: core/be/be_mem/vaddr_pipe/chained_genblk1_1__ch_reg/data_r_reg_15_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_mem/vaddr_pipe/chained_genblk1_2__ch_reg/data_r_reg_15_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: clk_i
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 1.000
+  Min Clock Paths Derating Factor : 1.000
+  Max Clock Paths Derating Factor : 1.000
+
+  Point                                                                             Trans       Incr       Path
+  ----------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                                   0.000      0.000
+  clock source latency                                                                         0.000      0.000
+  clk_i (in)                                                                        0.000      0.000      0.000 r
+  core/be/be_mem/vaddr_pipe/chained_genblk1_1__ch_reg/data_r_reg_15_/CLK (DFFX1)    0.000      0.000      0.000 r
+  core/be/be_mem/vaddr_pipe/chained_genblk1_1__ch_reg/data_r_reg_15_/Q (DFFX1)      0.030      0.173 &    0.173 f
+  core/be/be_mem/vaddr_pipe/chained_genblk1_2__ch_reg/data_r_reg_15_/D (DFFX1)      0.030      0.000 &    0.173 f
+  data arrival time                                                                                       0.173
+
+  clock core_clk (rise edge)                                                                   0.000      0.000
+  clock source latency                                                                         0.000      0.000
+  clk_i (in)                                                                        0.000      0.000      0.000 r
+  core/be/be_mem/vaddr_pipe/chained_genblk1_2__ch_reg/data_r_reg_15_/CLK (DFFX1)    0.000      0.000      0.000 r
+  clock reconvergence pessimism                                                                0.000      0.000
+  library hold time                                                                           -0.007     -0.007
+  data required time                                                                                     -0.007
+  ----------------------------------------------------------------------------------------------------------------
+  data required time                                                                                     -0.007
+  data arrival time                                                                                      -0.173
+  ----------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                             0.180
+
+
+  Startpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_94_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_177_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: clk_i
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 1.000
+  Min Clock Paths Derating Factor : 1.000
+  Max Clock Paths Derating Factor : 1.000
+
+  Point                                                               Trans       Incr       Path
+  --------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock source latency                                                           0.000      0.000
+  clk_i (in)                                                          0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_94_/CLK (DFFX1)     0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_94_/Q (DFFX1)       0.030      0.173 &    0.173 f
+  core/be/be_calculator/calc_stage_reg/data_r_reg_177_/D (DFFX1)      0.030      0.000 &    0.173 f
+  data arrival time                                                                         0.173
+
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock source latency                                                           0.000      0.000
+  clk_i (in)                                                          0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_177_/CLK (DFFX1)    0.000      0.000      0.000 r
+  clock reconvergence pessimism                                                  0.000      0.000
+  library hold time                                                             -0.007     -0.007
+  data required time                                                                       -0.007
+  --------------------------------------------------------------------------------------------------
+  data required time                                                                       -0.007
+  data arrival time                                                                        -0.173
+  --------------------------------------------------------------------------------------------------
+  slack (MET)                                                                               0.180
+
+
+  Startpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_76_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_159_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: clk_i
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 1.000
+  Min Clock Paths Derating Factor : 1.000
+  Max Clock Paths Derating Factor : 1.000
+
+  Point                                                               Trans       Incr       Path
+  --------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock source latency                                                           0.000      0.000
+  clk_i (in)                                                          0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_76_/CLK (DFFX1)     0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_76_/Q (DFFX1)       0.030      0.173 &    0.173 f
+  core/be/be_calculator/calc_stage_reg/data_r_reg_159_/D (DFFX1)      0.030      0.000 &    0.173 f
+  data arrival time                                                                         0.173
+
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock source latency                                                           0.000      0.000
+  clk_i (in)                                                          0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_159_/CLK (DFFX1)    0.000      0.000      0.000 r
+  clock reconvergence pessimism                                                  0.000      0.000
+  library hold time                                                             -0.007     -0.007
+  data required time                                                                       -0.007
+  --------------------------------------------------------------------------------------------------
+  data required time                                                                       -0.007
+  data arrival time                                                                        -0.173
+  --------------------------------------------------------------------------------------------------
+  slack (MET)                                                                               0.180
+
+
+  Startpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_46_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_129_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: clk_i
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 1.000
+  Min Clock Paths Derating Factor : 1.000
+  Max Clock Paths Derating Factor : 1.000
+
+  Point                                                               Trans       Incr       Path
+  --------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock source latency                                                           0.000      0.000
+  clk_i (in)                                                          0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_46_/CLK (DFFX1)     0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_46_/Q (DFFX1)       0.030      0.173 &    0.173 f
+  core/be/be_calculator/calc_stage_reg/data_r_reg_129_/D (DFFX1)      0.030      0.000 &    0.173 f
+  data arrival time                                                                         0.173
+
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock source latency                                                           0.000      0.000
+  clk_i (in)                                                          0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_129_/CLK (DFFX1)    0.000      0.000      0.000 r
+  clock reconvergence pessimism                                                  0.000      0.000
+  library hold time                                                             -0.007     -0.007
+  data required time                                                                       -0.007
+  --------------------------------------------------------------------------------------------------
+  data required time                                                                       -0.007
+  data arrival time                                                                        -0.173
+  --------------------------------------------------------------------------------------------------
+  slack (MET)                                                                               0.180
+
+
+  Startpoint: core/be/be_mem/vaddr_pipe/chained_genblk1_1__ch_reg/data_r_reg_37_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_mem/vaddr_pipe/chained_genblk1_2__ch_reg/data_r_reg_37_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: clk_i
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 1.000
+  Min Clock Paths Derating Factor : 1.000
+  Max Clock Paths Derating Factor : 1.000
+
+  Point                                                                             Trans       Incr       Path
+  ----------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                                   0.000      0.000
+  clock source latency                                                                         0.000      0.000
+  clk_i (in)                                                                        0.000      0.000      0.000 r
+  core/be/be_mem/vaddr_pipe/chained_genblk1_1__ch_reg/data_r_reg_37_/CLK (DFFX1)    0.000      0.000      0.000 r
+  core/be/be_mem/vaddr_pipe/chained_genblk1_1__ch_reg/data_r_reg_37_/Q (DFFX1)      0.030      0.173 &    0.173 f
+  core/be/be_mem/vaddr_pipe/chained_genblk1_2__ch_reg/data_r_reg_37_/D (DFFX1)      0.030      0.000 &    0.173 f
+  data arrival time                                                                                       0.173
+
+  clock core_clk (rise edge)                                                                   0.000      0.000
+  clock source latency                                                                         0.000      0.000
+  clk_i (in)                                                                        0.000      0.000      0.000 r
+  core/be/be_mem/vaddr_pipe/chained_genblk1_2__ch_reg/data_r_reg_37_/CLK (DFFX1)    0.000      0.000      0.000 r
+  clock reconvergence pessimism                                                                0.000      0.000
+  library hold time                                                                           -0.007     -0.007
+  data required time                                                                                     -0.007
+  ----------------------------------------------------------------------------------------------------------------
+  data required time                                                                                     -0.007
+  data arrival time                                                                                      -0.173
+  ----------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                             0.180
+
+
+  Startpoint: core/be/be_mem/vaddr_pipe/chained_genblk1_1__ch_reg/data_r_reg_32_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_mem/vaddr_pipe/chained_genblk1_2__ch_reg/data_r_reg_32_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: clk_i
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 1.000
+  Min Clock Paths Derating Factor : 1.000
+  Max Clock Paths Derating Factor : 1.000
+
+  Point                                                                             Trans       Incr       Path
+  ----------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                                   0.000      0.000
+  clock source latency                                                                         0.000      0.000
+  clk_i (in)                                                                        0.000      0.000      0.000 r
+  core/be/be_mem/vaddr_pipe/chained_genblk1_1__ch_reg/data_r_reg_32_/CLK (DFFX1)    0.000      0.000      0.000 r
+  core/be/be_mem/vaddr_pipe/chained_genblk1_1__ch_reg/data_r_reg_32_/Q (DFFX1)      0.030      0.173 &    0.173 f
+  core/be/be_mem/vaddr_pipe/chained_genblk1_2__ch_reg/data_r_reg_32_/D (DFFX1)      0.030      0.000 &    0.173 f
+  data arrival time                                                                                       0.173
+
+  clock core_clk (rise edge)                                                                   0.000      0.000
+  clock source latency                                                                         0.000      0.000
+  clk_i (in)                                                                        0.000      0.000      0.000 r
+  core/be/be_mem/vaddr_pipe/chained_genblk1_2__ch_reg/data_r_reg_32_/CLK (DFFX1)    0.000      0.000      0.000 r
+  clock reconvergence pessimism                                                                0.000      0.000
+  library hold time                                                                           -0.007     -0.007
+  data required time                                                                                     -0.007
+  ----------------------------------------------------------------------------------------------------------------
+  data required time                                                                                     -0.007
+  data arrival time                                                                                      -0.173
+  ----------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                             0.180
+
+
+  Startpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_28_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_111_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: clk_i
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 1.000
+  Min Clock Paths Derating Factor : 1.000
+  Max Clock Paths Derating Factor : 1.000
+
+  Point                                                               Trans       Incr       Path
+  --------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock source latency                                                           0.000      0.000
+  clk_i (in)                                                          0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_28_/CLK (DFFX1)     0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_28_/Q (DFFX1)       0.030      0.173 &    0.173 f
+  core/be/be_calculator/calc_stage_reg/data_r_reg_111_/D (DFFX1)      0.030      0.000 &    0.173 f
+  data arrival time                                                                         0.173
+
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock source latency                                                           0.000      0.000
+  clk_i (in)                                                          0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_111_/CLK (DFFX1)    0.000      0.000      0.000 r
+  clock reconvergence pessimism                                                  0.000      0.000
+  library hold time                                                             -0.007     -0.007
+  data required time                                                                       -0.007
+  --------------------------------------------------------------------------------------------------
+  data required time                                                                       -0.007
+  data arrival time                                                                        -0.173
+  --------------------------------------------------------------------------------------------------
+  slack (MET)                                                                               0.180
+
+
+  Startpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_50_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_133_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: clk_i
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 1.000
+  Min Clock Paths Derating Factor : 1.000
+  Max Clock Paths Derating Factor : 1.000
+
+  Point                                                               Trans       Incr       Path
+  --------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock source latency                                                           0.000      0.000
+  clk_i (in)                                                          0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_50_/CLK (DFFX1)     0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_50_/Q (DFFX1)       0.030      0.173 &    0.173 f
+  core/be/be_calculator/calc_stage_reg/data_r_reg_133_/D (DFFX1)      0.030      0.000 &    0.173 f
+  data arrival time                                                                         0.173
+
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock source latency                                                           0.000      0.000
+  clk_i (in)                                                          0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_133_/CLK (DFFX1)    0.000      0.000      0.000 r
+  clock reconvergence pessimism                                                  0.000      0.000
+  library hold time                                                             -0.007     -0.007
+  data required time                                                                       -0.007
+  --------------------------------------------------------------------------------------------------
+  data required time                                                                       -0.007
+  data arrival time                                                                        -0.173
+  --------------------------------------------------------------------------------------------------
+  slack (MET)                                                                               0.180
+
+
+  Startpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_62_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_145_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: clk_i
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 1.000
+  Min Clock Paths Derating Factor : 1.000
+  Max Clock Paths Derating Factor : 1.000
+
+  Point                                                               Trans       Incr       Path
+  --------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock source latency                                                           0.000      0.000
+  clk_i (in)                                                          0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_62_/CLK (DFFX1)     0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_62_/Q (DFFX1)       0.030      0.173 &    0.173 f
+  core/be/be_calculator/calc_stage_reg/data_r_reg_145_/D (DFFX1)      0.030      0.000 &    0.173 f
+  data arrival time                                                                         0.173
+
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock source latency                                                           0.000      0.000
+  clk_i (in)                                                          0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_145_/CLK (DFFX1)    0.000      0.000      0.000 r
+  clock reconvergence pessimism                                                  0.000      0.000
+  library hold time                                                             -0.007     -0.007
+  data required time                                                                       -0.007
+  --------------------------------------------------------------------------------------------------
+  data required time                                                                       -0.007
+  data arrival time                                                                        -0.173
+  --------------------------------------------------------------------------------------------------
+  slack (MET)                                                                               0.180
+
+
+  Startpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_9_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_92_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: clk_i
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 1.000
+  Min Clock Paths Derating Factor : 1.000
+  Max Clock Paths Derating Factor : 1.000
+
+  Point                                                              Trans       Incr       Path
+  -------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                    0.000      0.000
+  clock source latency                                                          0.000      0.000
+  clk_i (in)                                                         0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_9_/CLK (DFFX1)     0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_9_/Q (DFFX1)       0.030      0.173 &    0.173 f
+  core/be/be_calculator/calc_stage_reg/data_r_reg_92_/D (DFFX1)      0.030      0.000 &    0.173 f
+  data arrival time                                                                        0.173
+
+  clock core_clk (rise edge)                                                    0.000      0.000
+  clock source latency                                                          0.000      0.000
+  clk_i (in)                                                         0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_92_/CLK (DFFX1)    0.000      0.000      0.000 r
+  clock reconvergence pessimism                                                 0.000      0.000
+  library hold time                                                            -0.007     -0.007
+  data required time                                                                      -0.007
+  -------------------------------------------------------------------------------------------------
+  data required time                                                                      -0.007
+  data arrival time                                                                       -0.173
+  -------------------------------------------------------------------------------------------------
+  slack (MET)                                                                              0.180
+
+
+  Startpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_67_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_150_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: clk_i
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 1.000
+  Min Clock Paths Derating Factor : 1.000
+  Max Clock Paths Derating Factor : 1.000
+
+  Point                                                               Trans       Incr       Path
+  --------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock source latency                                                           0.000      0.000
+  clk_i (in)                                                          0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_67_/CLK (DFFX1)     0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_67_/Q (DFFX1)       0.030      0.173 &    0.173 f
+  core/be/be_calculator/calc_stage_reg/data_r_reg_150_/D (DFFX1)      0.030      0.000 &    0.173 f
+  data arrival time                                                                         0.173
+
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock source latency                                                           0.000      0.000
+  clk_i (in)                                                          0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_150_/CLK (DFFX1)    0.000      0.000      0.000 r
+  clock reconvergence pessimism                                                  0.000      0.000
+  library hold time                                                             -0.007     -0.007
+  data required time                                                                       -0.007
+  --------------------------------------------------------------------------------------------------
+  data required time                                                                       -0.007
+  data arrival time                                                                        -0.173
+  --------------------------------------------------------------------------------------------------
+  slack (MET)                                                                               0.180
+
+
+  Startpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_72_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_155_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: clk_i
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 1.000
+  Min Clock Paths Derating Factor : 1.000
+  Max Clock Paths Derating Factor : 1.000
+
+  Point                                                               Trans       Incr       Path
+  --------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock source latency                                                           0.000      0.000
+  clk_i (in)                                                          0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_72_/CLK (DFFX1)     0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_72_/Q (DFFX1)       0.030      0.173 &    0.173 f
+  core/be/be_calculator/calc_stage_reg/data_r_reg_155_/D (DFFX1)      0.030      0.000 &    0.173 f
+  data arrival time                                                                         0.173
+
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock source latency                                                           0.000      0.000
+  clk_i (in)                                                          0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_155_/CLK (DFFX1)    0.000      0.000      0.000 r
+  clock reconvergence pessimism                                                  0.000      0.000
+  library hold time                                                             -0.007     -0.007
+  data required time                                                                       -0.007
+  --------------------------------------------------------------------------------------------------
+  data required time                                                                       -0.007
+  data arrival time                                                                        -0.173
+  --------------------------------------------------------------------------------------------------
+  slack (MET)                                                                               0.180
+
+
+  Startpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_65_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_148_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: clk_i
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 1.000
+  Min Clock Paths Derating Factor : 1.000
+  Max Clock Paths Derating Factor : 1.000
+
+  Point                                                               Trans       Incr       Path
+  --------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock source latency                                                           0.000      0.000
+  clk_i (in)                                                          0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_65_/CLK (DFFX1)     0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_65_/Q (DFFX1)       0.030      0.173 &    0.173 f
+  core/be/be_calculator/calc_stage_reg/data_r_reg_148_/D (DFFX1)      0.030      0.000 &    0.173 f
+  data arrival time                                                                         0.173
+
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock source latency                                                           0.000      0.000
+  clk_i (in)                                                          0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_148_/CLK (DFFX1)    0.000      0.000      0.000 r
+  clock reconvergence pessimism                                                  0.000      0.000
+  library hold time                                                             -0.007     -0.007
+  data required time                                                                       -0.007
+  --------------------------------------------------------------------------------------------------
+  data required time                                                                       -0.007
+  data arrival time                                                                        -0.173
+  --------------------------------------------------------------------------------------------------
+  slack (MET)                                                                               0.180
+
+
+  Startpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_110_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_193_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: clk_i
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 1.000
+  Min Clock Paths Derating Factor : 1.000
+  Max Clock Paths Derating Factor : 1.000
+
+  Point                                                               Trans       Incr       Path
+  --------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock source latency                                                           0.000      0.000
+  clk_i (in)                                                          0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_110_/CLK (DFFX1)    0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_110_/Q (DFFX1)      0.030      0.173 &    0.173 f
+  core/be/be_calculator/calc_stage_reg/data_r_reg_193_/D (DFFX1)      0.030      0.000 &    0.173 f
+  data arrival time                                                                         0.173
+
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock source latency                                                           0.000      0.000
+  clk_i (in)                                                          0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_193_/CLK (DFFX1)    0.000      0.000      0.000 r
+  clock reconvergence pessimism                                                  0.000      0.000
+  library hold time                                                             -0.007     -0.007
+  data required time                                                                       -0.007
+  --------------------------------------------------------------------------------------------------
+  data required time                                                                       -0.007
+  data arrival time                                                                        -0.173
+  --------------------------------------------------------------------------------------------------
+  slack (MET)                                                                               0.180
+
+
+  Startpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_92_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_175_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: clk_i
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 1.000
+  Min Clock Paths Derating Factor : 1.000
+  Max Clock Paths Derating Factor : 1.000
+
+  Point                                                               Trans       Incr       Path
+  --------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock source latency                                                           0.000      0.000
+  clk_i (in)                                                          0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_92_/CLK (DFFX1)     0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_92_/Q (DFFX1)       0.030      0.173 &    0.173 f
+  core/be/be_calculator/calc_stage_reg/data_r_reg_175_/D (DFFX1)      0.030      0.000 &    0.173 f
+  data arrival time                                                                         0.173
+
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock source latency                                                           0.000      0.000
+  clk_i (in)                                                          0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_175_/CLK (DFFX1)    0.000      0.000      0.000 r
+  clock reconvergence pessimism                                                  0.000      0.000
+  library hold time                                                             -0.007     -0.007
+  data required time                                                                       -0.007
+  --------------------------------------------------------------------------------------------------
+  data required time                                                                       -0.007
+  data arrival time                                                                        -0.173
+  --------------------------------------------------------------------------------------------------
+  slack (MET)                                                                               0.180
+
+
+  Startpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_257_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_340_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: clk_i
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 1.000
+  Min Clock Paths Derating Factor : 1.000
+  Max Clock Paths Derating Factor : 1.000
+
+  Point                                                               Trans       Incr       Path
+  --------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock source latency                                                           0.000      0.000
+  clk_i (in)                                                          0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_257_/CLK (DFFX1)    0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_257_/Q (DFFX1)      0.030      0.173 &    0.173 f
+  core/be/be_calculator/calc_stage_reg/data_r_reg_340_/D (DFFX1)      0.030      0.000 &    0.173 f
+  data arrival time                                                                         0.173
+
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock source latency                                                           0.000      0.000
+  clk_i (in)                                                          0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_340_/CLK (DFFX1)    0.000      0.000      0.000 r
+  clock reconvergence pessimism                                                  0.000      0.000
+  library hold time                                                             -0.007     -0.007
+  data required time                                                                       -0.007
+  --------------------------------------------------------------------------------------------------
+  data required time                                                                       -0.007
+  data arrival time                                                                        -0.173
+  --------------------------------------------------------------------------------------------------
+  slack (MET)                                                                               0.180
+
+
+  Startpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_77_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_160_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: clk_i
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 1.000
+  Min Clock Paths Derating Factor : 1.000
+  Max Clock Paths Derating Factor : 1.000
+
+  Point                                                               Trans       Incr       Path
+  --------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock source latency                                                           0.000      0.000
+  clk_i (in)                                                          0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_77_/CLK (DFFX1)     0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_77_/Q (DFFX1)       0.030      0.173 &    0.173 f
+  core/be/be_calculator/calc_stage_reg/data_r_reg_160_/D (DFFX1)      0.030      0.000 &    0.173 f
+  data arrival time                                                                         0.173
+
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock source latency                                                           0.000      0.000
+  clk_i (in)                                                          0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_160_/CLK (DFFX1)    0.000      0.000      0.000 r
+  clock reconvergence pessimism                                                  0.000      0.000
+  library hold time                                                             -0.007     -0.007
+  data required time                                                                       -0.007
+  --------------------------------------------------------------------------------------------------
+  data required time                                                                       -0.007
+  data arrival time                                                                        -0.173
+  --------------------------------------------------------------------------------------------------
+  slack (MET)                                                                               0.180
+
+
+  Startpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_80_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_163_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: clk_i
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 1.000
+  Min Clock Paths Derating Factor : 1.000
+  Max Clock Paths Derating Factor : 1.000
+
+  Point                                                               Trans       Incr       Path
+  --------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock source latency                                                           0.000      0.000
+  clk_i (in)                                                          0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_80_/CLK (DFFX1)     0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_80_/Q (DFFX1)       0.030      0.173 &    0.173 f
+  core/be/be_calculator/calc_stage_reg/data_r_reg_163_/D (DFFX1)      0.030      0.000 &    0.174 f
+  data arrival time                                                                         0.174
+
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock source latency                                                           0.000      0.000
+  clk_i (in)                                                          0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_163_/CLK (DFFX1)    0.000      0.000      0.000 r
+  clock reconvergence pessimism                                                  0.000      0.000
+  library hold time                                                             -0.007     -0.007
+  data required time                                                                       -0.007
+  --------------------------------------------------------------------------------------------------
+  data required time                                                                       -0.007
+  data arrival time                                                                        -0.174
+  --------------------------------------------------------------------------------------------------
+  slack (MET)                                                                               0.180
+
+
+  Startpoint: core/be/be_calculator/exc_stage_reg/data_r_reg_2_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_calculator/exc_stage_reg/data_r_reg_7_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: clk_i
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 1.000
+  Min Clock Paths Derating Factor : 1.000
+  Max Clock Paths Derating Factor : 1.000
+
+  Point                                                            Trans       Incr       Path
+  -----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                  0.000      0.000
+  clock source latency                                                        0.000      0.000
+  clk_i (in)                                                       0.000      0.000      0.000 r
+  core/be/be_calculator/exc_stage_reg/data_r_reg_2_/CLK (DFFX1)    0.000      0.000      0.000 r
+  core/be/be_calculator/exc_stage_reg/data_r_reg_2_/Q (DFFX1)      0.030      0.174 &    0.174 f
+  core/be/be_calculator/exc_stage_reg/data_r_reg_7_/D (DFFX1)      0.030      0.000 &    0.174 f
+  data arrival time                                                                      0.174
+
+  clock core_clk (rise edge)                                                  0.000      0.000
+  clock source latency                                                        0.000      0.000
+  clk_i (in)                                                       0.000      0.000      0.000 r
+  core/be/be_calculator/exc_stage_reg/data_r_reg_7_/CLK (DFFX1)    0.000      0.000      0.000 r
+  clock reconvergence pessimism                                               0.000      0.000
+  library hold time                                                          -0.007     -0.007
+  data required time                                                                    -0.007
+  -----------------------------------------------------------------------------------------------
+  data required time                                                                    -0.007
+  data arrival time                                                                     -0.174
+  -----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.181
+
+
+  Startpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_71_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_154_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: clk_i
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 1.000
+  Min Clock Paths Derating Factor : 1.000
+  Max Clock Paths Derating Factor : 1.000
+
+  Point                                                               Trans       Incr       Path
+  --------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock source latency                                                           0.000      0.000
+  clk_i (in)                                                          0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_71_/CLK (DFFX1)     0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_71_/Q (DFFX1)       0.030      0.174 &    0.174 f
+  core/be/be_calculator/calc_stage_reg/data_r_reg_154_/D (DFFX1)      0.030      0.000 &    0.174 f
+  data arrival time                                                                         0.174
+
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock source latency                                                           0.000      0.000
+  clk_i (in)                                                          0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_154_/CLK (DFFX1)    0.000      0.000      0.000 r
+  clock reconvergence pessimism                                                  0.000      0.000
+  library hold time                                                             -0.007     -0.007
+  data required time                                                                       -0.007
+  --------------------------------------------------------------------------------------------------
+  data required time                                                                       -0.007
+  data arrival time                                                                        -0.174
+  --------------------------------------------------------------------------------------------------
+  slack (MET)                                                                               0.181
+
+
+  Startpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_54_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_137_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: clk_i
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 1.000
+  Min Clock Paths Derating Factor : 1.000
+  Max Clock Paths Derating Factor : 1.000
+
+  Point                                                               Trans       Incr       Path
+  --------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock source latency                                                           0.000      0.000
+  clk_i (in)                                                          0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_54_/CLK (DFFX1)     0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_54_/Q (DFFX1)       0.030      0.174 &    0.174 f
+  core/be/be_calculator/calc_stage_reg/data_r_reg_137_/D (DFFX1)      0.030      0.000 &    0.174 f
+  data arrival time                                                                         0.174
+
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock source latency                                                           0.000      0.000
+  clk_i (in)                                                          0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_137_/CLK (DFFX1)    0.000      0.000      0.000 r
+  clock reconvergence pessimism                                                  0.000      0.000
+  library hold time                                                             -0.007     -0.007
+  data required time                                                                       -0.007
+  --------------------------------------------------------------------------------------------------
+  data required time                                                                       -0.007
+  data arrival time                                                                        -0.174
+  --------------------------------------------------------------------------------------------------
+  slack (MET)                                                                               0.181
+
+
+  Startpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_12_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_95_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: clk_i
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 1.000
+  Min Clock Paths Derating Factor : 1.000
+  Max Clock Paths Derating Factor : 1.000
+
+  Point                                                              Trans       Incr       Path
+  -------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                    0.000      0.000
+  clock source latency                                                          0.000      0.000
+  clk_i (in)                                                         0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_12_/CLK (DFFX1)    0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_12_/Q (DFFX1)      0.030      0.174 &    0.174 f
+  core/be/be_calculator/calc_stage_reg/data_r_reg_95_/D (DFFX1)      0.030      0.000 &    0.174 f
+  data arrival time                                                                        0.174
+
+  clock core_clk (rise edge)                                                    0.000      0.000
+  clock source latency                                                          0.000      0.000
+  clk_i (in)                                                         0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_95_/CLK (DFFX1)    0.000      0.000      0.000 r
+  clock reconvergence pessimism                                                 0.000      0.000
+  library hold time                                                            -0.007     -0.007
+  data required time                                                                      -0.007
+  -------------------------------------------------------------------------------------------------
+  data required time                                                                      -0.007
+  data arrival time                                                                       -0.174
+  -------------------------------------------------------------------------------------------------
+  slack (MET)                                                                              0.181
+
+
+  Startpoint: core/be/be_calculator/exc_stage_reg/data_r_reg_14_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_calculator/exc_stage_reg/data_r_reg_19_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: clk_i
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 1.000
+  Min Clock Paths Derating Factor : 1.000
+  Max Clock Paths Derating Factor : 1.000
+
+  Point                                                             Trans       Incr       Path
+  ------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                   0.000      0.000
+  clock source latency                                                         0.000      0.000
+  clk_i (in)                                                        0.000      0.000      0.000 r
+  core/be/be_calculator/exc_stage_reg/data_r_reg_14_/CLK (DFFX1)    0.000      0.000      0.000 r
+  core/be/be_calculator/exc_stage_reg/data_r_reg_14_/Q (DFFX1)      0.030      0.174 &    0.174 f
+  core/be/be_calculator/exc_stage_reg/data_r_reg_19_/D (DFFX1)      0.030      0.000 &    0.174 f
+  data arrival time                                                                       0.174
+
+  clock core_clk (rise edge)                                                   0.000      0.000
+  clock source latency                                                         0.000      0.000
+  clk_i (in)                                                        0.000      0.000      0.000 r
+  core/be/be_calculator/exc_stage_reg/data_r_reg_19_/CLK (DFFX1)    0.000      0.000      0.000 r
+  clock reconvergence pessimism                                                0.000      0.000
+  library hold time                                                           -0.007     -0.007
+  data required time                                                                     -0.007
+  ------------------------------------------------------------------------------------------------
+  data required time                                                                     -0.007
+  data arrival time                                                                      -0.174
+  ------------------------------------------------------------------------------------------------
+  slack (MET)                                                                             0.181
+
+
+  Startpoint: core/be/be_mem/vaddr_pipe/chained_genblk1_1__ch_reg/data_r_reg_33_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_mem/vaddr_pipe/chained_genblk1_2__ch_reg/data_r_reg_33_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: clk_i
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 1.000
+  Min Clock Paths Derating Factor : 1.000
+  Max Clock Paths Derating Factor : 1.000
+
+  Point                                                                             Trans       Incr       Path
+  ----------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                                   0.000      0.000
+  clock source latency                                                                         0.000      0.000
+  clk_i (in)                                                                        0.000      0.000      0.000 r
+  core/be/be_mem/vaddr_pipe/chained_genblk1_1__ch_reg/data_r_reg_33_/CLK (DFFX1)    0.000      0.000      0.000 r
+  core/be/be_mem/vaddr_pipe/chained_genblk1_1__ch_reg/data_r_reg_33_/Q (DFFX1)      0.030      0.174 &    0.174 f
+  core/be/be_mem/vaddr_pipe/chained_genblk1_2__ch_reg/data_r_reg_33_/D (DFFX1)      0.030      0.000 &    0.174 f
+  data arrival time                                                                                       0.174
+
+  clock core_clk (rise edge)                                                                   0.000      0.000
+  clock source latency                                                                         0.000      0.000
+  clk_i (in)                                                                        0.000      0.000      0.000 r
+  core/be/be_mem/vaddr_pipe/chained_genblk1_2__ch_reg/data_r_reg_33_/CLK (DFFX1)    0.000      0.000      0.000 r
+  clock reconvergence pessimism                                                                0.000      0.000
+  library hold time                                                                           -0.007     -0.007
+  data required time                                                                                     -0.007
+  ----------------------------------------------------------------------------------------------------------------
+  data required time                                                                                     -0.007
+  data arrival time                                                                                      -0.174
+  ----------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                             0.181
+
+
+  Startpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_57_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_140_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: clk_i
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 1.000
+  Min Clock Paths Derating Factor : 1.000
+  Max Clock Paths Derating Factor : 1.000
+
+  Point                                                               Trans       Incr       Path
+  --------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock source latency                                                           0.000      0.000
+  clk_i (in)                                                          0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_57_/CLK (DFFX1)     0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_57_/Q (DFFX1)       0.030      0.174 &    0.174 f
+  core/be/be_calculator/calc_stage_reg/data_r_reg_140_/D (DFFX1)      0.030      0.000 &    0.174 f
+  data arrival time                                                                         0.174
+
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock source latency                                                           0.000      0.000
+  clk_i (in)                                                          0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_140_/CLK (DFFX1)    0.000      0.000      0.000 r
+  clock reconvergence pessimism                                                  0.000      0.000
+  library hold time                                                             -0.007     -0.007
+  data required time                                                                       -0.007
+  --------------------------------------------------------------------------------------------------
+  data required time                                                                       -0.007
+  data arrival time                                                                        -0.174
+  --------------------------------------------------------------------------------------------------
+  slack (MET)                                                                               0.181
+
+
+  Startpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_53_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_136_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: clk_i
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 1.000
+  Min Clock Paths Derating Factor : 1.000
+  Max Clock Paths Derating Factor : 1.000
+
+  Point                                                               Trans       Incr       Path
+  --------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock source latency                                                           0.000      0.000
+  clk_i (in)                                                          0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_53_/CLK (DFFX1)     0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_53_/Q (DFFX1)       0.030      0.174 &    0.174 f
+  core/be/be_calculator/calc_stage_reg/data_r_reg_136_/D (DFFX1)      0.030      0.000 &    0.174 f
+  data arrival time                                                                         0.174
+
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock source latency                                                           0.000      0.000
+  clk_i (in)                                                          0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_136_/CLK (DFFX1)    0.000      0.000      0.000 r
+  clock reconvergence pessimism                                                  0.000      0.000
+  library hold time                                                             -0.007     -0.007
+  data required time                                                                       -0.007
+  --------------------------------------------------------------------------------------------------
+  data required time                                                                       -0.007
+  data arrival time                                                                        -0.174
+  --------------------------------------------------------------------------------------------------
+  slack (MET)                                                                               0.181
+
+
+  Startpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_64_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_147_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: clk_i
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 1.000
+  Min Clock Paths Derating Factor : 1.000
+  Max Clock Paths Derating Factor : 1.000
+
+  Point                                                               Trans       Incr       Path
+  --------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock source latency                                                           0.000      0.000
+  clk_i (in)                                                          0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_64_/CLK (DFFX1)     0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_64_/Q (DFFX1)       0.030      0.174 &    0.174 f
+  core/be/be_calculator/calc_stage_reg/data_r_reg_147_/D (DFFX1)      0.030      0.000 &    0.174 f
+  data arrival time                                                                         0.174
+
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock source latency                                                           0.000      0.000
+  clk_i (in)                                                          0.000      0.000      0.000 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_147_/CLK (DFFX1)    0.000      0.000      0.000 r
+  clock reconvergence pessimism                                                  0.000      0.000
+  library hold time                                                             -0.007     -0.007
+  data required time                                                                       -0.007
+  --------------------------------------------------------------------------------------------------
+  data required time                                                                       -0.007
+  data arrival time                                                                        -0.174
+  --------------------------------------------------------------------------------------------------
+  slack (MET)                                                                               0.181
+
+Report timing status: Processing group core_clk (total endpoints 49647)...10% done.
+Report timing status: Processing group core_clk (total endpoints 49647)...20% done.
+Report timing status: Processing group core_clk (total endpoints 49647)...30% done.
+Report timing status: Processing group core_clk (total endpoints 49647)...40% done.
+Report timing status: Processing group core_clk (total endpoints 49647)...50% done.
+Report timing status: Processing group core_clk (total endpoints 49647)...60% done.
+Report timing status: Processing group core_clk (total endpoints 49647)...70% done.
+Report timing status: Processing group core_clk (total endpoints 49647)...80% done.
+Report timing status: Processing group core_clk (total endpoints 49647)...90% done.
+Warning: report_timing has satisfied the max_paths criteria. There are 49617 further endpoints which have paths of interest with slack less than 1000000.000 that were not considered when generating this report. (UITE-502)
+
+Report timing status: Completed...
+1
